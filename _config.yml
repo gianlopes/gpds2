@@ -123,4 +123,4 @@ compress_html:
   # ignore:
   #   envs: all
 
-theme: jekyll-theme-hacker
+theme: jekyll-theme-cayman
