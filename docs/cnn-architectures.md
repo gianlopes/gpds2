@@ -1,7 +1,7 @@
 ---
 layout: default
 title: CNN architectures
-nav_order: 5
+nav_order: 4
 ---
 
 # CNN architectures
