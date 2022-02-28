@@ -8,8 +8,8 @@ nav_order: 1
 # Classification of 2 Classes (With or Without Tumor)
 {: .no_toc }
 
-Topic text
-1. INTRODUCTION
+
+######1. INTRODUCTION
 
 The process of diagnosing brain tumors from magnetic resonance imaging (MRI) is often time-consuming. Thus, a rapid analyses through an automated system could help improve the treatment possibilities and optimize hospital resources. The following neural network classifies MRI images as tumoral and non-tumoral.
 
