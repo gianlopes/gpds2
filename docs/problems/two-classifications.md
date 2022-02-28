@@ -39,9 +39,8 @@ The results for classifying the existence or not of a tumor are given by the tab
 
 
 ### 4.3 Images with Blur
-<p align="center">
 ![Blured_images](https://user-images.githubusercontent.com/43020938/155989144-30fa85f2-81da-474f-ad17-c1ec034a57f4.png)
- </p>
+ 
 
 ### 4.4 Images with Contrast
 ![Contrast_Images](https://user-images.githubusercontent.com/43020938/155988603-42b01253-8644-46da-b875-f1e901ff98aa.png)
