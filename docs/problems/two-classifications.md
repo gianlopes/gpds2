@@ -71,3 +71,15 @@ Below are examples of images with different ghosting levels:
 ![Ghost_Images](https://user-images.githubusercontent.com/43020938/156930978-dc6c93b2-bba3-476c-a383-bb874e333e18.png)
 
 The following table contains the classification results after adding ghosting effect to images:
+
+![Ghosting_Results](https://user-images.githubusercontent.com/43020938/156935603-8572b22b-ffd8-4338-a0e2-cb81b870d304.PNG)
+
+![Ghost_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156935616-45d21212-8546-4603-81e7-b7733ea2c538.png)
+
+
+
+
+
+
+
+
