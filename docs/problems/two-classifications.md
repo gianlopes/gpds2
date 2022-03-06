@@ -59,6 +59,9 @@ Below are examples of images with different ringing levels:
 ![Ring_Images](https://user-images.githubusercontent.com/43020938/156930957-3e30489a-0a1b-4a60-9708-9a95e7dd0209.png)
 
 The following table contains the classification results after adding ringing effect to images:
+![Ringing Results](https://user-images.githubusercontent.com/43020938/156931530-491175ea-f4e6-4643-8aeb-f41ae9605f90.PNG)
+![Ring_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156931551-7137ae34-7a50-489c-93c6-b975ab2e1653.png)
+
 
 
 ### 4.6 Images with Ghosting
