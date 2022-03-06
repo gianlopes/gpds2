@@ -25,7 +25,7 @@ To identify if an image has a tumor, we used a CNN-based classification system. 
 ## 4. RESULTS
 
 ### 4.1 Original Images
-The results for classifying the existence or not of a tumor are given by the table and by the confusion matrix, Figure [1], shown below.
+The results for classifying the existence or not of a tumor are given by the table and by the confusion matrix, Figure [1], shown below:
 
 ![Results_Original](https://user-images.githubusercontent.com/43020938/154950112-37b25b78-1bda-4d0a-8df7-731b9cc31dc2.PNG)
 
@@ -59,7 +59,9 @@ Below are examples of images with different ringing levels:
 ![Ring_Images](https://user-images.githubusercontent.com/43020938/156930957-3e30489a-0a1b-4a60-9708-9a95e7dd0209.png)
 
 The following table contains the classification results after adding ringing effect to images:
+
 ![Ringing Results](https://user-images.githubusercontent.com/43020938/156931530-491175ea-f4e6-4643-8aeb-f41ae9605f90.PNG)
+
 ![Ring_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156931551-7137ae34-7a50-489c-93c6-b975ab2e1653.png)
 
 
