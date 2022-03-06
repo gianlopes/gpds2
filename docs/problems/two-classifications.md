@@ -41,6 +41,9 @@ Below are examples of images with different noise levels:
 
 The following table contains the classification results after adding gaussian noise to the images:
 
+![Noise_Results](https://user-images.githubusercontent.com/43020938/156947241-3e1e7f06-bd67-4ee0-84eb-abf06124795b.PNG)
+
+![Noise_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156947255-ffc84264-556b-4032-b13a-bac484e1d3c6.png)
 
 ### 4.3 Images with Blur
 Below are examples of images with different blurring levels:
