@@ -36,13 +36,27 @@ The results for classifying the existence or not of a tumor are given by the tab
 ![Heatmap_original_image](https://user-images.githubusercontent.com/43020938/154948876-aba9e571-3df8-4ed2-93fd-8a2f7c1189cd.png)
 
 ### 4.2 Images with Noise
+Below are examples of images with different noise levels:
+![Noisy_Images](https://user-images.githubusercontent.com/43020938/156930924-ff2a0a70-d7f0-4bc4-b72c-3b2dcdb5838a.png)
 
 
 ### 4.3 Images with Blur
-![Blured_images](https://user-images.githubusercontent.com/43020938/155989144-30fa85f2-81da-474f-ad17-c1ec034a57f4.png)
- 
+Below are examples of images with different blurring levels:
+![Blur_Images](https://user-images.githubusercontent.com/43020938/156930936-611fb586-b6f9-43db-afa4-2a2f6e1eb58e.png)
+
 
 ### 4.4 Images with Contrast
-![Contrast_Images](https://user-images.githubusercontent.com/43020938/155988603-42b01253-8644-46da-b875-f1e901ff98aa.png)
+Below are examples of images with different contrast levels:
+![Contrast_Images](https://user-images.githubusercontent.com/43020938/156930945-afb82f87-55f0-4c78-ba78-d9a9a37b65d6.png)
+
 
 ### 4.5 Images with Ringing
+Below are examples of images with different ringing levels:
+![Ring_Images](https://user-images.githubusercontent.com/43020938/156930957-3e30489a-0a1b-4a60-9708-9a95e7dd0209.png)
+
+
+### 4.6 Images with Ghosting
+Below are examples of images with different ghosting levels:
+![Ghost_Images](https://user-images.githubusercontent.com/43020938/156930978-dc6c93b2-bba3-476c-a383-bb874e333e18.png)
+
+
