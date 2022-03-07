@@ -51,6 +51,11 @@ Below are examples of images with different blurring levels:
 
 The following table contains the classification results after blurring the images:
 
+![Blur_Results](https://user-images.githubusercontent.com/43020938/157022746-66b8e35a-1150-4c1c-8ba9-b01242a5fdbd.PNG)
+
+![Blur_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/157022792-ae3af73e-80e9-4f76-a5ac-9c659c2a82bd.png)
+
+
 ### 4.4 Images with Contrast
 Below are examples of images with different contrast levels:
 ![Contrast_Images](https://user-images.githubusercontent.com/43020938/156930945-afb82f87-55f0-4c78-ba78-d9a9a37b65d6.png)
@@ -66,7 +71,6 @@ The following table contains the classification results after adding ringing eff
 ![Ringing Results](https://user-images.githubusercontent.com/43020938/156931530-491175ea-f4e6-4643-8aeb-f41ae9605f90.PNG)
 
 ![Ring_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156931551-7137ae34-7a50-489c-93c6-b975ab2e1653.png)
-
 
 
 ### 4.6 Images with Ghosting
