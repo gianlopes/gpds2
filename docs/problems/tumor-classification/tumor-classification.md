@@ -23,7 +23,7 @@ For this problem we used the database named [*Brain Tumor Dataset*](https://figs
 
 The dataset comes in a different file format commonly used in matlab. An adaptation was made to this [notebook](https://github.com/aksh-ai/neuralBlack/blob/master/brain_tumor_dataset_preparation.ipynb) to extract the images in png format. A [folder with all the 3064 images extracted](https://drive.google.com/drive/folders/1-0i-Q2-to2y5_IyOZMmTzE8WbEuvbj0B?usp=sharing) is available in our drive.
 
-<img src="images/tumors.png" height="400" />
+![tumors](images/tumors.png)
 
 The images are 2 dimensional and single channel (0-255). Each of them comes with the tumor label, patient ID, tumor border (4 points describing the bounding box of the tumor) and a tumor mask (binary image with 1s indicating tumor region). The following image illustrates brain scans with tumor highlighting using the available masks.
 
@@ -106,13 +106,13 @@ On the sections above we have pointed out that there were patients with more tha
 
 When all images were mixed without care, the model had 99.13% accuracy, 0.0306 loss and the following confusion matrix and stats:
 
-<img src="images/results/confusion_matrix_mixed_patients.png" height="450" />
+![confusion_matrix_mixed_patients](images/results/confusion_matrix_mixed_patients.png)
 
 ![stats](images/results/stats_mixed_patients.png)
 
 When patients were taken into consideration while splitting the data, a smaller accuracy of 93.91% was observed.
 
-<img src="images/results/confusion_matrix_non_mixed_patients.png" height="450" />
+![confusion_matrix_non_mixed_patients](images/results/confusion_matrix_non_mixed_patients.png)
 
 ![stats](images/results/stats_non_mixed_patients.png)
 
@@ -160,3 +160,4 @@ We repeated this test process to every artifact with each of the 10 degradation 
 
 Comentar sobre os resultados acima e adicionar os outros.
 Explicar melhor a arquitetura.
+
