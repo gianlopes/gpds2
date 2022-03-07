@@ -25,7 +25,7 @@ To identify if an image has a tumor, we used a CNN-based classification system. 
 ## 4. RESULTS
 
 ### 4.1 Original Images
-The results for classifying the existence or not of a tumor are given by the table and by the confusion matrix, Figure [1], shown below.
+The results for classifying the existence or not of a tumor are given by the table and by the confusion matrix, Figure [1], shown below:
 
 ![Results_Original](https://user-images.githubusercontent.com/43020938/154950112-37b25b78-1bda-4d0a-8df7-731b9cc31dc2.PNG)
 
@@ -36,13 +36,57 @@ The results for classifying the existence or not of a tumor are given by the tab
 ![Heatmap_original_image](https://user-images.githubusercontent.com/43020938/154948876-aba9e571-3df8-4ed2-93fd-8a2f7c1189cd.png)
 
 ### 4.2 Images with Noise
+Below are examples of images with different noise levels:
+![Noisy_Images](https://user-images.githubusercontent.com/43020938/156930924-ff2a0a70-d7f0-4bc4-b72c-3b2dcdb5838a.png)
 
+The following table contains the classification results after adding gaussian noise to the images:
+
+![Noise_Results](https://user-images.githubusercontent.com/43020938/156947241-3e1e7f06-bd67-4ee0-84eb-abf06124795b.PNG)
+
+![Noise_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156947255-ffc84264-556b-4032-b13a-bac484e1d3c6.png)
 
 ### 4.3 Images with Blur
-![Blured_images](https://user-images.githubusercontent.com/43020938/155989144-30fa85f2-81da-474f-ad17-c1ec034a57f4.png)
- 
+Below are examples of images with different blurring levels:
+![Blur_Images](https://user-images.githubusercontent.com/43020938/156930936-611fb586-b6f9-43db-afa4-2a2f6e1eb58e.png)
+
+The following table contains the classification results after blurring the images:
+
+![Blur_Results](https://user-images.githubusercontent.com/43020938/157022746-66b8e35a-1150-4c1c-8ba9-b01242a5fdbd.PNG)
+
+![Blur_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/157022792-ae3af73e-80e9-4f76-a5ac-9c659c2a82bd.png)
+
 
 ### 4.4 Images with Contrast
-![Contrast_Images](https://user-images.githubusercontent.com/43020938/155988603-42b01253-8644-46da-b875-f1e901ff98aa.png)
+Below are examples of images with different contrast levels:
+![Contrast_Images](https://user-images.githubusercontent.com/43020938/156930945-afb82f87-55f0-4c78-ba78-d9a9a37b65d6.png)
+
+The following table contains the classification results after changing contrast effect to images:
 
 ### 4.5 Images with Ringing
+Below are examples of images with different ringing levels:
+![Ring_Images](https://user-images.githubusercontent.com/43020938/156930957-3e30489a-0a1b-4a60-9708-9a95e7dd0209.png)
+
+The following table contains the classification results after adding ringing effect to images:
+
+![Ringing Results](https://user-images.githubusercontent.com/43020938/156931530-491175ea-f4e6-4643-8aeb-f41ae9605f90.PNG)
+
+![Ring_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156931551-7137ae34-7a50-489c-93c6-b975ab2e1653.png)
+
+
+### 4.6 Images with Ghosting
+Below are examples of images with different ghosting levels:
+![Ghost_Images](https://user-images.githubusercontent.com/43020938/156930978-dc6c93b2-bba3-476c-a383-bb874e333e18.png)
+
+The following table contains the classification results after adding ghosting effect to images:
+
+![Ghosting_Results](https://user-images.githubusercontent.com/43020938/156935603-8572b22b-ffd8-4338-a0e2-cb81b870d304.PNG)
+
+![Ghost_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/156935616-45d21212-8546-4603-81e7-b7733ea2c538.png)
+
+
+
+
+
+
+
+
