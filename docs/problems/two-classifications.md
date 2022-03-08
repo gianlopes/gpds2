@@ -62,6 +62,11 @@ Below are examples of images with different contrast levels:
 
 The following table contains the classification results after changing contrast effect to images:
 
+![Contrast_Results](https://user-images.githubusercontent.com/43020938/157148132-3094da42-2544-4c44-8cc5-a375f315a686.PNG)
+
+![Contrast_MSE_Accuracy](https://user-images.githubusercontent.com/43020938/157148191-e42ce445-48ff-4d34-b497-5ee1d3a92754.png)
+
+
 ### 4.5 Images with Ringing
 Below are examples of images with different ringing levels:
 ![Ring_Images](https://user-images.githubusercontent.com/43020938/156930957-3e30489a-0a1b-4a60-9708-9a95e7dd0209.png)
