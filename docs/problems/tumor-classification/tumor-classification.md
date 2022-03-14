@@ -7,11 +7,14 @@ has_children: true
 ---
 
 # Tumor Type Classification
-<!-- {: .no_toc } -->
+{: .no_toc }
 
-## Quick Review
+## Table of contents
 
+{: .no_toc .text-delta }
 
+1. TOC
+   {:toc}
 
 ## Dataset
 
@@ -93,13 +96,15 @@ It's also necessary to change the last layer in the architecture, as original Re
 
 This architecture and implementation used the following references: [Neural Black github repository](https://github.com/aksh-ai/neuralBlack) and the article [An Enhanced Deep Learning Approach for Brain Cancer MRI Images Classification using Residual Networks](https://www.researchgate.net/publication/337877208_An_Enhanced_Deep_Learning_Approach_for_Brain_Cancer_MRI_Images_Classification_using_Residual_Networks)
 
+For the training configuration, our loss function was defined as the [Cross Entropy Loss](https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html) and the optimizer as [SGD (stochastic gradient descent)](https://pytorch.org/docs/stable/generated/torch.optim.SGD.html#torch.optim.SGD) with momentum 0.9 and learning rate equal to 0.0003. These parameters were also based on the [Neural Black github repository](https://github.com/aksh-ai/neuralBlack). They can be easily altered in the *neural_network.py* file to any of the loss functions and optimizers available in PyTorch.
+
 \# TODO: Further testing with more architectures.
 
 ## Results
 
 Multiple tests with different purposes were made.
 
-### About patients
+### **About patients**
 
 On the sections above we have pointed out that there were patients with more than one image in the dataset and that we should be cautious with this fact as it might influence results. To see these results, we decided to test both datasets, one where extra care was taken to not have the same patient in train, validation and test datasets and other where they were all mixed.
 
@@ -118,46 +123,68 @@ When patients were taken into consideration while splitting the data, a smaller 
 
 Looking in these stats, it's clear they can be influenced. A similar result was seen in [this paper](https://www.researchgate.net/publication/337877208_An_Enhanced_Deep_Learning_Approach_for_Brain_Cancer_MRI_Images_Classification_using_Residual_Networks). [This jupyter notebook](https://colab.research.google.com/drive/1mJa1CZ7JbXEeG1dCVoWnLPebUhShF1fn?usp=sharing) takes a look into the misclassified images, which were mostly true Meningioma tumors classified as Pituitary by the model. Turns out most of them were meningioma, but were also located close to the Pituitary region which could be a possible reason to the model's confusion. When these images were mixed, the model possibly had access to some images of these patients in the training phase, which made the decision process easier. Taking a look at the heat maps wasn't enough to conclude that the model was learning patient features aside from the tumor, but that could be a possibility.
 
-### Artifacts
+### **Artifacts**
 
 *Note: In the artifact generation documentation, there's a disclaimer explaining some nuance about the degradation levels that is very important to be read before trying to take any conclusions about these results.*
 
 The artifacts listed in the *\#Artifacts* tab were the main target of our testing. We wanted to see the impact of the artifacts when they were present in the test set, while the neural network had never seen images with such effects. To do this we had the following setup:
 
-Training set -> Original
+**Training set** -> Original
 
-Validation set -> Original
+**Validation set** -> Original
 
-Test set -> Applied a single artifact in a single specific level to **all images**
+**Test set** -> Applied a single artifact in a single specific level to **all images**
 
 We repeated this test process to every artifact with each of the 10 degradation levels defined. The following graph illustrates the results we achieved:
 
 ![accxdeg](images/results/accXdeglevel_non_deg.png)
 
-*Note: the graph was plotted with lines to give a better feel of progression, but remember these results are punctual and not continuous.*
+*Note: the graph was plotted with lines to give a better feel of progression, but remember these results are discrete and not continuous.*
 
-#### Blurring
+The image above shows the performance of a model trained only with the original images. We can see that the artifacts had different impacts in the results obtained. Once again we emphasize that degradation levels are not necessarily the same across artifacts, for this reason, included the images bellow where each artifact is shown with some sample images. You can open them in a new tab to see the effects clearly.
+
+#### **Blurring**
+
+Low levels of blurring barely affected the performance, which started decreasing a bit linearly once it started being more noticeable.
 
 ![blurring](images/results/visualexamples/accXdeglevel_blurring_edit.png)
 
-#### Contrast
+#### **Contrast**
+
+Contrast alteration had a pretty strong impact on the accuracy. Even though the human eye can still notice the tumors in the images, the network was simply not used to working with such small range of intensity values.
 
 ![contrast](images/results/visualexamples/accXdeglevel_contrast_edit.png)
 
-#### Gaussian Noise
+#### **Gaussian Noise**
+
+Gaussian noise had a very high impact on accuracy metrics. Even the slightly and unnoticeable levels of noise caused sizeable changes in accuracy. But it's quite weird that the higher levels had the same value, so the reasoning for this must be checked.
 
 ![contrast](images/results/visualexamples/accXdeglevel_ruido_gaussiano_edit.png)
 
-#### Ghosting
+#### **Ghosting**
+
+Ghosting was the lightest impacting artifact, even though the ghosts are pretty visible in the higher levels, the network did't get confused as much.
 
 ![contrast](images/results/visualexamples/accXdeglevel_ghosting_edit.png)
 
-#### Ringing
+#### **Ringing**
+
+Ringing also had light impact on it's lower levels. Due to the way ringing is generated by filtering away frequency information, the highest levels loose too much image quality.
 
 ![ringing](images/results/visualexamples/accXdeglevel_ringing_edit.png)
 
-### TODO
+### **Training with artifacts**
 
-Comentar sobre os resultados acima e adicionar os outros.
-Explicar melhor a arquitetura.
+We wanted to see if the model could learn to deal with such artifacts. To do that we applied an specific artifact and level to all images in the training set and proceeded with testing. Due to good results, we came up with the following setup:
 
+**Training set** -> For each image, a random artifact with a random level was selected and applied, resulting in a set with all variations of effects.
+
+**Validation set** -> Same as above
+
+**Test set** -> Applied a single artifact in a single specific level to **all images**
+
+Once again, we repeated this test process to every artifact with each of the 10 degradation levels defined. The following graph illustrates the results we achieved:
+
+![all_deg](images/results/accXdeglevel_all_deg.png)
+
+We can see that by being exposed to all the degradations, the model was able to maintain much higher accuracy. The highest levels were still impactful, but less than what we've seen before.
